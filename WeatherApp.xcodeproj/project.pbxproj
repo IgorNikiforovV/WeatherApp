@@ -15,6 +15,7 @@
 		ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786D42ACC10B50044B030 /* LoginView.swift */; };
 		ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */; };
 		ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */; };
+		ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ACC786D42ACC10B50044B030 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerFactory.swift; sourceTree = "<group>"; };
+		ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */,
+				ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
 				ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */,
 				ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */,
+				ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
 			);
