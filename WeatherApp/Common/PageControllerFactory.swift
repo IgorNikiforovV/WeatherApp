@@ -15,15 +15,13 @@ enum Page {
 
 struct PageControllerFactory {
 	func controller(for page: Page) -> UIViewController {
-		let controller = UIViewController()
 		switch page {
 		case .first:
-			controller.view.backgroundColor = .systemRed
+			return OnboardingViewController(heroImageName: "bird", titleText: "Car is faster, easer to use, and has a brand new look and feel that will make you feel like you are back in 1989.")
 		case .second:
-			controller.view.backgroundColor = .systemGreen
+			return OnboardingViewController(heroImageName: "cake", titleText: "Move your money around the world quickly and securely.")
 		case .third:
-			controller.view.backgroundColor = .systemBlue
+			return OnboardingViewController(heroImageName: "mountain", titleText: "Learn more at ru.wikipedia.org.")
 		}
-		return controller
 	}
 }

@@ -33,7 +33,8 @@ final class OnboardingContainerViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		view.backgroundColor = .systemPurple
+		view.backgroundColor = .systemBackground
+		
 		addChild(pageViewController)
 		view.addSubview(pageViewController.view)
 		pageViewController.didMove(toParent: self)
@@ -86,8 +87,4 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
 		pages.firstIndex(of: self.currentVC) ?? 0
 	}
-
-	
-	
-	
 }
