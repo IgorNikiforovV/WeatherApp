@@ -13,6 +13,8 @@
 		ACC0E29F2ACBEED400C40D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC0E29E2ACBEED400C40D8C /* Assets.xcassets */; };
 		ACC0E2A22ACBEED400C40D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC0E2A02ACBEED400C40D8C /* LaunchScreen.storyboard */; };
 		ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786D42ACC10B50044B030 /* LoginView.swift */; };
+		ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */; };
+		ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ACC0E2A12ACBEED400C40D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACC0E2A32ACBEED400C40D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC786D42ACC10B50044B030 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		ACC0E2942ACBEED200C40D8C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACC786D92ACE91010044B030 /* Common */,
 				ACC786D22ACC10360044B030 /* Application */,
 				ACC786D12ACC0FA20044B030 /* Resources */,
 				ACC786D32ACC10690044B030 /* Login */,
+				ACC786D62ACE8E100044B030 /* Onboarding */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -89,6 +95,22 @@
 				ACC786D42ACC10B50044B030 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		ACC786D62ACE8E100044B030 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		ACC786D92ACE91010044B030 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +186,9 @@
 				ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */,
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
 				ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */,
+				ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
+				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
