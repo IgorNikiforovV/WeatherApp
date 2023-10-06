@@ -7,27 +7,32 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
 
 	let loginViewController = LoginViewController()
 	let onboardingContainerViewController = OnboardingContainerViewController()
-	let dummyViewController = DummyViewController()
+	let mainViewController = MainViewController()
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		
-		window = UIWindow(windowScene: windowScene)
-		// window?.rootViewController = LoginViewController()
-		window?.backgroundColor = .systemBackground
-		
-		window?.rootViewController = loginViewController
-		
 		loginViewController.delegate = self
 		onboardingContainerViewController.delegate = self
-		dummyViewController.logoutDelegate = self
 		
+		window = UIWindow(windowScene: windowScene)
+		window?.backgroundColor = .systemBackground
+		
+		let viewController = MainViewController()
+		viewController.setStatusBar()
+		
+		UINavigationBar.appearance().isTranslucent = false
+		UINavigationBar.appearance().backgroundColor = appColor
+		
+		window?.rootViewController = viewController
 		window?.makeKeyAndVisible()
 	}
 }
@@ -35,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate: LoginViewControllerDelegate {
 	func didLogin() {
 		if LocalState.hasOnboarding {
-			setRootViewController(dummyViewController)
+			setRootViewController(mainViewController)
 		} else {
 			setRootViewController(onboardingContainerViewController)
 		}
@@ -45,7 +50,7 @@ extension SceneDelegate: LoginViewControllerDelegate {
 extension SceneDelegate: OnboardingContainerViewControllerDelegate {
 	func didFinishOnboarding() {
 		LocalState.hasOnboarding = true
-		setRootViewController(dummyViewController)
+		setRootViewController(mainViewController)
 	}
 }
 

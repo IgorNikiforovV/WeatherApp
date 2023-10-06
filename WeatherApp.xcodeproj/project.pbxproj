@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACA934372AD19ED400A8FA11 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934362AD19ED400A8FA11 /* ProfileManager.swift */; };
+		ACA9343B2AD1A59800A8FA11 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */; };
+		ACA9343E2AD3011300A8FA11 /* AccountsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343D2AD3011300A8FA11 /* AccountsRepository.swift */; };
+		ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343F2AD309D000A8FA11 /* CurrencyFormatter.swift */; };
+		ACA934422AD32D8600A8FA11 /* Extension + Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */; };
+		ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */; };
 		ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */; };
 		ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */; };
 		ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2992ACBEED200C40D8C /* LoginViewController.swift */; };
@@ -18,9 +24,31 @@
 		ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */; };
 		ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DF2ACFE1F70044B030 /* DummyViewController.swift */; };
 		ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786E12ACFECAC0044B030 /* LocalState.swift */; };
+		ACC786E52AD007A20044B030 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786E42AD007A20044B030 /* MainViewController.swift */; };
+		ACC786E72AD00D940044B030 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786E62AD00D940044B030 /* Extension + UIViewController.swift */; };
+		ACC786EA2AD0115A0044B030 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786E92AD0115A0044B030 /* AccountSummaryViewController.swift */; };
+		ACC786EC2AD01C9A0044B030 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786EB2AD01C9A0044B030 /* AccountSummaryHeaderView.swift */; };
+		ACC786EE2AD01CD60044B030 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACC786ED2AD01CD60044B030 /* AccountSummaryHeaderView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ACA9344B2AD59BF900A8FA11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACC0E28A2ACBEED200C40D8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACC0E2912ACBEED200C40D8C;
+			remoteInfo = WeatherApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		ACA934362AD19ED400A8FA11 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
+		ACA9343D2AD3011300A8FA11 /* AccountsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsRepository.swift; sourceTree = "<group>"; };
+		ACA9343F2AD309D000A8FA11 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Decimal.swift"; sourceTree = "<group>"; };
+		ACA934472AD59BF900A8FA11 /* WeatherUnitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUnitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		ACC0E2922ACBEED200C40D8C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,9 +62,21 @@
 		ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ACC786DF2ACFE1F70044B030 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		ACC786E12ACFECAC0044B030 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		ACC786E42AD007A20044B030 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ACC786E62AD00D940044B030 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		ACC786E92AD0115A0044B030 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		ACC786EB2AD01C9A0044B030 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		ACC786ED2AD01CD60044B030 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ACA934442AD59BF900A8FA11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACC0E28F2ACBEED200C40D8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +87,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACA934352AD19E9F00A8FA11 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ACA934362AD19ED400A8FA11 /* ProfileManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ACA934382AD1A53D00A8FA11 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786EB2AD01C9A0044B030 /* AccountSummaryHeaderView.swift */,
+				ACC786ED2AD01CD60044B030 /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		ACA934392AD1A55E00A8FA11 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ACA9343C2AD300FD00A8FA11 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				ACA9343D2AD3011300A8FA11 /* AccountsRepository.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		ACA934482AD59BF900A8FA11 /* WeatherUnitAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */,
+			);
+			path = WeatherUnitAppTests;
+			sourceTree = "<group>";
+		};
 		ACC0E2892ACBEED200C40D8C = {
 			isa = PBXGroup;
 			children = (
 				ACC0E2942ACBEED200C40D8C /* WeatherApp */,
+				ACA934482AD59BF900A8FA11 /* WeatherUnitAppTests */,
 				ACC0E2932ACBEED200C40D8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				ACC0E2922ACBEED200C40D8C /* WeatherApp.app */,
+				ACA934472AD59BF900A8FA11 /* WeatherUnitAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,11 +149,15 @@
 		ACC0E2942ACBEED200C40D8C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				ACC786D92ACE91010044B030 /* Utils */,
 				ACC786D22ACC10360044B030 /* Application */,
-				ACC786D12ACC0FA20044B030 /* Resources */,
+				ACC786D92ACE91010044B030 /* Utils */,
+				ACC786E32AD007750044B030 /* Navigation */,
 				ACC786D32ACC10690044B030 /* Login */,
 				ACC786D62ACE8E100044B030 /* Onboarding */,
+				ACC786E82AD010EF0044B030 /* AccountSummary */,
+				ACC786D12ACC0FA20044B030 /* Resources */,
+				ACA9343C2AD300FD00A8FA11 /* Storage */,
+				ACA934352AD19E9F00A8FA11 /* Networking */,
 				ACC786DE2ACFE1D30044B030 /* Dummy */,
 			);
 			path = WeatherApp;
@@ -118,6 +205,9 @@
 			children = (
 				ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */,
 				ACC786E12ACFECAC0044B030 /* LocalState.swift */,
+				ACC786E62AD00D940044B030 /* Extension + UIViewController.swift */,
+				ACA9343F2AD309D000A8FA11 /* CurrencyFormatter.swift */,
+				ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -130,9 +220,45 @@
 			path = Dummy;
 			sourceTree = "<group>";
 		};
+		ACC786E32AD007750044B030 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786E42AD007A20044B030 /* MainViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		ACC786E82AD010EF0044B030 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786E92AD0115A0044B030 /* AccountSummaryViewController.swift */,
+				ACA934382AD1A53D00A8FA11 /* Header */,
+				ACA934392AD1A55E00A8FA11 /* Cells */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ACA934462AD59BF900A8FA11 /* WeatherUnitAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACA9344D2AD59BF900A8FA11 /* Build configuration list for PBXNativeTarget "WeatherUnitAppTests" */;
+			buildPhases = (
+				ACA934432AD59BF900A8FA11 /* Sources */,
+				ACA934442AD59BF900A8FA11 /* Frameworks */,
+				ACA934452AD59BF900A8FA11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACA9344C2AD59BF900A8FA11 /* PBXTargetDependency */,
+			);
+			name = WeatherUnitAppTests;
+			productName = WeatherUnitAppTests;
+			productReference = ACA934472AD59BF900A8FA11 /* WeatherUnitAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ACC0E2912ACBEED200C40D8C /* WeatherApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACC0E2A62ACBEED400C40D8C /* Build configuration list for PBXNativeTarget "WeatherApp" */;
@@ -160,6 +286,11 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					ACA934462AD59BF900A8FA11 = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+						TestTargetID = ACC0E2912ACBEED200C40D8C;
+					};
 					ACC0E2912ACBEED200C40D8C = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -179,15 +310,24 @@
 			projectRoot = "";
 			targets = (
 				ACC0E2912ACBEED200C40D8C /* WeatherApp */,
+				ACA934462AD59BF900A8FA11 /* WeatherUnitAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ACA934452AD59BF900A8FA11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACC0E2902ACBEED200C40D8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC786EE2AD01CD60044B030 /* AccountSummaryHeaderView.xib in Resources */,
 				ACC0E2A22ACBEED400C40D8C /* LaunchScreen.storyboard in Resources */,
 				ACC0E29F2ACBEED400C40D8C /* Assets.xcassets in Resources */,
 			);
@@ -196,23 +336,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ACA934432AD59BF900A8FA11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACC0E28E2ACBEED200C40D8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC786EC2AD01C9A0044B030 /* AccountSummaryHeaderView.swift in Sources */,
 				ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */,
 				ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */,
+				ACA9343E2AD3011300A8FA11 /* AccountsRepository.swift in Sources */,
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
 				ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */,
 				ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */,
+				ACA9343B2AD1A59800A8FA11 /* AccountSummaryCell.swift in Sources */,
+				ACA934372AD19ED400A8FA11 /* ProfileManager.swift in Sources */,
+				ACA934422AD32D8600A8FA11 /* Extension + Decimal.swift in Sources */,
 				ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */,
+				ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
+				ACC786E72AD00D940044B030 /* Extension + UIViewController.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
 				ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */,
+				ACC786E52AD007A20044B030 /* MainViewController.swift in Sources */,
+				ACC786EA2AD0115A0044B030 /* AccountSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACA9344C2AD59BF900A8FA11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACC0E2912ACBEED200C40D8C /* WeatherApp */;
+			targetProxy = ACA9344B2AD59BF900A8FA11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ACC0E2A02ACBEED400C40D8C /* LaunchScreen.storyboard */ = {
@@ -226,6 +391,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ACA9344E2AD59BF900A8FA11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MSVFBRY49T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.niv.project.WeatherUnitAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherApp";
+			};
+			name = Debug;
+		};
+		ACA9344F2AD59BF900A8FA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MSVFBRY49T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.niv.project.WeatherUnitAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherApp";
+			};
+			name = Release;
+		};
 		ACC0E2A42ACBEED400C40D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +603,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ACA9344D2AD59BF900A8FA11 /* Build configuration list for PBXNativeTarget "WeatherUnitAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACA9344E2AD59BF900A8FA11 /* Debug */,
+				ACA9344F2AD59BF900A8FA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACC0E28D2ACBEED200C40D8C /* Build configuration list for PBXProject "WeatherApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
