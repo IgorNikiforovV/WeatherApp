@@ -13,7 +13,11 @@ enum Page {
 	case third
 }
 
-struct PageControllerFactory {
+protocol IPageControllerFactory {
+	func controller(for page: Page) -> UIViewController
+}
+
+struct PageControllerFactory: IPageControllerFactory {
 	func controller(for page: Page) -> UIViewController {
 		switch page {
 		case .first:

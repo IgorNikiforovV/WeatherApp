@@ -16,6 +16,8 @@
 		ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */; };
 		ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */; };
 		ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */; };
+		ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786DF2ACFE1F70044B030 /* DummyViewController.swift */; };
+		ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC786E12ACFECAC0044B030 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		ACC786D72ACE8E690044B030 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerFactory.swift; sourceTree = "<group>"; };
 		ACC786DC2ACEB6E80044B030 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		ACC786DF2ACFE1F70044B030 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		ACC786E12ACFECAC0044B030 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +66,12 @@
 		ACC0E2942ACBEED200C40D8C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				ACC786D92ACE91010044B030 /* Common */,
+				ACC786D92ACE91010044B030 /* Utils */,
 				ACC786D22ACC10360044B030 /* Application */,
 				ACC786D12ACC0FA20044B030 /* Resources */,
 				ACC786D32ACC10690044B030 /* Login */,
 				ACC786D62ACE8E100044B030 /* Onboarding */,
+				ACC786DE2ACFE1D30044B030 /* Dummy */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -108,12 +113,21 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		ACC786D92ACE91010044B030 /* Common */ = {
+		ACC786D92ACE91010044B030 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				ACC786DA2ACE91A10044B030 /* PageControllerFactory.swift */,
+				ACC786E12ACFECAC0044B030 /* LocalState.swift */,
 			);
-			path = Common;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ACC786DE2ACFE1D30044B030 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				ACC786DF2ACFE1F70044B030 /* DummyViewController.swift */,
+			);
+			path = Dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */,
+				ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */,
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
 				ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */,
 				ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */,
 				ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
+				ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

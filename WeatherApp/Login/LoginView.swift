@@ -42,11 +42,10 @@ private extension LoginView {
 		usernameTextField.translatesAutoresizingMaskIntoConstraints = false
 		usernameTextField.placeholder = "Username"
 		usernameTextField.delegate = self
-		
 
-		
 		passwordTextField.translatesAutoresizingMaskIntoConstraints = false
 		passwordTextField.placeholder = "Password"
+		passwordTextField.isSecureTextEntry = true
 		passwordTextField.delegate = self
 		
 		deviderView.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +68,16 @@ private extension LoginView {
 		deviderView.heightAnchor.constraint(equalToConstant: 1).isActive = true
 	}
 }
+
+// MARK: Public methods
+
+extension LoginView {
+	public func cleanTextFields() {
+		usernameTextField.text = ""
+		passwordTextField.text = ""
+	}
+}
+
 
 // MARK: UITextFieldDelegate
 
