@@ -19,36 +19,47 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
+
+		window = UIWindow(windowScene: windowScene)
+		window?.makeKeyAndVisible()
+		window?.backgroundColor = .systemBackground
 		
 		loginViewController.delegate = self
 		onboardingContainerViewController.delegate = self
 		
-		window = UIWindow(windowScene: windowScene)
-		window?.backgroundColor = .systemBackground
-		
-		let viewController = MainViewController()
-		viewController.setStatusBar()
-		
-		UINavigationBar.appearance().isTranslucent = false
-		UINavigationBar.appearance().backgroundColor = appColor
-		
-		window?.rootViewController = viewController
-		window?.makeKeyAndVisible()
+		displayLogin()
+		return
 	}
-}
-
-extension SceneDelegate: LoginViewControllerDelegate {
-	func didLogin() {
+	
+	private func displayLogin() {
+		setRootViewController(loginViewController)
+	}
+	
+	private func displayNextScreen() {
 		if LocalState.hasOnboarding {
+			prepMainView()
 			setRootViewController(mainViewController)
 		} else {
 			setRootViewController(onboardingContainerViewController)
 		}
 	}
+	
+	private func prepMainView() {
+		mainViewController.setStatusBar()
+		UINavigationBar.appearance().isTranslucent = false
+		UINavigationBar.appearance().backgroundColor = appColor
+	}
+}
+
+extension SceneDelegate: LoginViewControllerDelegate {
+	func didLogin() {
+		displayNextScreen()
+	}
 }
 
 extension SceneDelegate: OnboardingContainerViewControllerDelegate {
 	func didFinishOnboarding() {
+		prepMainView()
 		LocalState.hasOnboarding = true
 		setRootViewController(mainViewController)
 	}
