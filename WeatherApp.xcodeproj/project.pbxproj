@@ -15,6 +15,9 @@
 		ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */; };
 		ACA934532AD7B38600A8FA11 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */; };
 		ACA934552AD7B64600A8FA11 /* UITextField + SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */; };
+		ACA934582AD7F9DF00A8FA11 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */; };
+		ACA9345B2AD7FFBD00A8FA11 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9345A2AD7FFBD00A8FA11 /* ShakeyBellView.swift */; };
+		ACA934832AD8156D00A8FA11 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */; };
 		ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */; };
 		ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */; };
 		ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2992ACBEED200C40D8C /* LoginViewController.swift */; };
@@ -53,6 +56,9 @@
 		ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + SecureToggle.swift"; sourceTree = "<group>"; };
+		ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
+		ACA9345A2AD7FFBD00A8FA11 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		ACC0E2922ACBEED200C40D8C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,22 @@
 			path = WeatherUnitAppTests;
 			sourceTree = "<group>";
 		};
+		ACA934562AD7F9C900A8FA11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ACA934592AD7FF8200A8FA11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ACA9345A2AD7FFBD00A8FA11 /* ShakeyBellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		ACC0E2892ACBEED200C40D8C = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +180,7 @@
 				ACC786E32AD007750044B030 /* Navigation */,
 				ACC786D32ACC10690044B030 /* Login */,
 				ACC786D62ACE8E100044B030 /* Onboarding */,
+				ACA934592AD7FF8200A8FA11 /* Components */,
 				ACC786E82AD010EF0044B030 /* AccountSummary */,
 				ACC786D12ACC0FA20044B030 /* Resources */,
 				ACA9343C2AD300FD00A8FA11 /* Storage */,
@@ -214,6 +237,7 @@
 				ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */,
 				ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */,
 				ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */,
+				ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,6 +261,7 @@
 		ACC786E82AD010EF0044B030 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
+				ACA934562AD7F9C900A8FA11 /* Views */,
 				ACC786E92AD0115A0044B030 /* AccountSummaryViewController.swift */,
 				ACA934382AD1A53D00A8FA11 /* Header */,
 				ACA934392AD1A55E00A8FA11 /* Cells */,
@@ -362,6 +387,7 @@
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
 				ACC786D52ACC10B50044B030 /* LoginView.swift in Sources */,
 				ACC786D82ACE8E690044B030 /* OnboardingContainerViewController.swift in Sources */,
+				ACA934832AD8156D00A8FA11 /* Extension + UIView.swift in Sources */,
 				ACA9343B2AD1A59800A8FA11 /* AccountSummaryCell.swift in Sources */,
 				ACA934372AD19ED400A8FA11 /* ProfileManager.swift in Sources */,
 				ACA934422AD32D8600A8FA11 /* Extension + Decimal.swift in Sources */,
@@ -370,8 +396,10 @@
 				ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
 				ACC786E72AD00D940044B030 /* Extension + UIViewController.swift in Sources */,
+				ACA9345B2AD7FFBD00A8FA11 /* ShakeyBellView.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
 				ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */,
+				ACA934582AD7F9DF00A8FA11 /* BadgeLabel.swift in Sources */,
 				ACC786E52AD007A20044B030 /* MainViewController.swift in Sources */,
 				ACC786EA2AD0115A0044B030 /* AccountSummaryViewController.swift in Sources */,
 			);
