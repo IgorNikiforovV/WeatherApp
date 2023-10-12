@@ -13,6 +13,8 @@
 		ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343F2AD309D000A8FA11 /* CurrencyFormatter.swift */; };
 		ACA934422AD32D8600A8FA11 /* Extension + Decimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */; };
 		ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */; };
+		ACA934532AD7B38600A8FA11 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */; };
+		ACA934552AD7B64600A8FA11 /* UITextField + SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */; };
 		ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */; };
 		ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */; };
 		ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2992ACBEED200C40D8C /* LoginViewController.swift */; };
@@ -49,6 +51,8 @@
 		ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Decimal.swift"; sourceTree = "<group>"; };
 		ACA934472AD59BF900A8FA11 /* WeatherUnitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUnitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
+		ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
+		ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + SecureToggle.swift"; sourceTree = "<group>"; };
 		ACC0E2922ACBEED200C40D8C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				ACC786E62AD00D940044B030 /* Extension + UIViewController.swift */,
 				ACA9343F2AD309D000A8FA11 /* CurrencyFormatter.swift */,
 				ACA934412AD32D8600A8FA11 /* Extension + Decimal.swift */,
+				ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */,
+				ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA934532AD7B38600A8FA11 /* NSNotificationName.swift in Sources */,
 				ACC786EC2AD01C9A0044B030 /* AccountSummaryHeaderView.swift in Sources */,
 				ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */,
 				ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */,
@@ -359,6 +366,7 @@
 				ACA934372AD19ED400A8FA11 /* ProfileManager.swift in Sources */,
 				ACA934422AD32D8600A8FA11 /* Extension + Decimal.swift in Sources */,
 				ACC786DD2ACEB6E80044B030 /* OnboardingViewController.swift in Sources */,
+				ACA934552AD7B64600A8FA11 /* UITextField + SecureToggle.swift in Sources */,
 				ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
 				ACC786E72AD00D940044B030 /* Extension + UIViewController.swift in Sources */,
