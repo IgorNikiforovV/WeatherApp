@@ -15,7 +15,6 @@
 		ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */; };
 		ACA934532AD7B38600A8FA11 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */; };
 		ACA934552AD7B64600A8FA11 /* UITextField + SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */; };
-		ACA934582AD7F9DF00A8FA11 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */; };
 		ACA9345B2AD7FFBD00A8FA11 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9345A2AD7FFBD00A8FA11 /* ShakeyBellView.swift */; };
 		ACA934832AD8156D00A8FA11 /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */; };
 		ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */; };
@@ -56,7 +55,6 @@
 		ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		ACA934522AD7B38600A8FA11 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + SecureToggle.swift"; sourceTree = "<group>"; };
-		ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 		ACA9345A2AD7FFBD00A8FA11 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 		ACC0E2922ACBEED200C40D8C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,14 +134,6 @@
 				ACA934502AD59CEA00A8FA11 /* CurrencyFormatterTests.swift */,
 			);
 			path = WeatherUnitAppTests;
-			sourceTree = "<group>";
-		};
-		ACA934562AD7F9C900A8FA11 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ACA934572AD7F9DF00A8FA11 /* BadgeLabel.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		ACA934592AD7FF8200A8FA11 /* Components */ = {
@@ -261,7 +251,6 @@
 		ACC786E82AD010EF0044B030 /* AccountSummary */ = {
 			isa = PBXGroup;
 			children = (
-				ACA934562AD7F9C900A8FA11 /* Views */,
 				ACC786E92AD0115A0044B030 /* AccountSummaryViewController.swift */,
 				ACA934382AD1A53D00A8FA11 /* Header */,
 				ACA934392AD1A55E00A8FA11 /* Cells */,
@@ -399,7 +388,6 @@
 				ACA9345B2AD7FFBD00A8FA11 /* ShakeyBellView.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
 				ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */,
-				ACA934582AD7F9DF00A8FA11 /* BadgeLabel.swift in Sources */,
 				ACC786E52AD007A20044B030 /* MainViewController.swift in Sources */,
 				ACC786EA2AD0115A0044B030 /* AccountSummaryViewController.swift in Sources */,
 			);
