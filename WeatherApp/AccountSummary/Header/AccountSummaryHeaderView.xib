@@ -11,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountSummaryHeaderView" customModule="WeatherApp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="pVt-sf-tpK"/>
+                <outlet property="dateLabel" destination="UKK-nX-SqI" id="RIq-iX-eZU"/>
+                <outlet property="nameLabel" destination="5sB-hw-dvj" id="JbD-Cn-BMD"/>
+                <outlet property="welcomeLabel" destination="SQj-zN-cFD" id="ZGf-z7-Uec"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

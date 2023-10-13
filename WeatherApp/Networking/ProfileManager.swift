@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol ProfileManageable {
-	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile, NetworkError>) -> Void)
+protocol ProfileManageable1 {
+	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile1, NetworkError1>) -> Void)
 }
 
-enum NetworkError: Error {
+enum NetworkError1: Error {
 	case serverError
 	case decodingError
 }
 
-struct Profile: Codable {
+struct Profile1: Codable {
 	let id: String
 	let firstName: String
 	let lastName: String
