@@ -29,21 +29,21 @@ final class AccountSummaryViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setup()
-		setupNavigationBar()
 	}
 }
 
 // MARK: Private mathods
 
 private extension AccountSummaryViewController {
-	func setupNavigationBar() {
-		navigationItem.rightBarButtonItem = logoutBarButtonItem
-	}
-
 	func setup() {
+		setupNavigationBar()
 		setupTableView()
 		setupTableHeaderView()
-		fetchDataAndLoadViews()
+		fetchData()
+	}
+	
+	func setupNavigationBar() {
+		navigationItem.rightBarButtonItem = logoutBarButtonItem
 	}
 	
 	func setupTableView() {
@@ -119,29 +119,37 @@ extension AccountSummaryViewController {
 
 // MARK: Networking
 private extension AccountSummaryViewController {
-	func fetchDataAndLoadViews() {
+	func fetchData() {
+		let group = DispatchGroup()
+
+		group.enter()
 		fetchProfile(forUserId: "1") { [weak self] result in
 			guard let self else { return }
 			switch result {
 			case .success(let profile):
 				self.profile = profile
 				self.configureTableHeaderView(with: profile)
-				self.tableView.reloadData()
 			case .failure(let error):
 				print(error.localizedDescription)
 			}
+			group.leave()
 		}
 		
+		group.enter()
 		fetchAccounts(forUserId: "1") { [weak self] result in
 			guard let self else { return }
 			switch result {
 			case .success(let accounts):
 				self.accounts = accounts
 				self.configureTableCells(with: accounts)
-				self.tableView.reloadData()
 			case .failure(let error):
 				print(error.localizedDescription)
 			}
+			group.leave()
+		}
+		
+		group.notify(queue: .main) {
+			self.tableView.reloadData()
 		}
 	}
 	
