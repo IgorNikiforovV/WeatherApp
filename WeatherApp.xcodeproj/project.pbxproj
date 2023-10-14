@@ -21,6 +21,9 @@
 		ACA934872AD92C6E00A8FA11 /* AccountSummaryViewController + Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934862AD92C6E00A8FA11 /* AccountSummaryViewController + Networking.swift */; };
 		ACA9348B2AD9654F00A8FA11 /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9348A2AD9654F00A8FA11 /* ProfileTest.swift */; };
 		ACA9348D2AD9673600A8FA11 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9348C2AD9673600A8FA11 /* AccountTests.swift */; };
+		ACA934902ADACF1C00A8FA11 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9348F2ADACF1C00A8FA11 /* SkeletonLoadable.swift */; };
+		ACA934922ADAD01100A8FA11 /* Extension + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934912ADAD01100A8FA11 /* Extension + UIColor.swift */; };
+		ACA934942ADAD2E900A8FA11 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934932ADAD2E900A8FA11 /* SkeletonCell.swift */; };
 		ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */; };
 		ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */; };
 		ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0E2992ACBEED200C40D8C /* LoginViewController.swift */; };
@@ -65,6 +68,9 @@
 		ACA934862AD92C6E00A8FA11 /* AccountSummaryViewController + Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController + Networking.swift"; sourceTree = "<group>"; };
 		ACA9348A2AD9654F00A8FA11 /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
 		ACA9348C2AD9673600A8FA11 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		ACA9348F2ADACF1C00A8FA11 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		ACA934912ADAD01100A8FA11 /* Extension + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIColor.swift"; sourceTree = "<group>"; };
+		ACA934932ADAD2E900A8FA11 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		ACC0E2922ACBEED200C40D8C /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC0E2952ACBEED200C40D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC0E2972ACBEED200C40D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		ACA934392AD1A55E00A8FA11 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ACA9348E2ADACF0000A8FA11 /* Skeleton */,
 				ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */,
 			);
 			path = Cells;
@@ -168,6 +175,15 @@
 				ACA9348C2AD9673600A8FA11 /* AccountTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		ACA9348E2ADACF0000A8FA11 /* Skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				ACA9348F2ADACF1C00A8FA11 /* SkeletonLoadable.swift */,
+				ACA934932ADAD2E900A8FA11 /* SkeletonCell.swift */,
+			);
+			path = Skeleton;
 			sourceTree = "<group>";
 		};
 		ACC0E2892ACBEED200C40D8C = {
@@ -255,6 +271,7 @@
 				ACA934542AD7B64600A8FA11 /* UITextField + SecureToggle.swift */,
 				ACA934822AD8156D00A8FA11 /* Extension + UIView.swift */,
 				ACA934842AD9268F00A8FA11 /* Extension + Date.swift */,
+				ACA934912ADAD01100A8FA11 /* Extension + UIColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -402,6 +419,7 @@
 				ACA934852AD9268F00A8FA11 /* Extension + Date.swift in Sources */,
 				ACC786EC2AD01C9A0044B030 /* AccountSummaryHeaderView.swift in Sources */,
 				ACC0E29A2ACBEED200C40D8C /* LoginViewController.swift in Sources */,
+				ACA934942ADAD2E900A8FA11 /* SkeletonCell.swift in Sources */,
 				ACC786E22ACFECAC0044B030 /* LocalState.swift in Sources */,
 				ACA9343E2AD3011300A8FA11 /* AccountsRepository.swift in Sources */,
 				ACC0E2962ACBEED200C40D8C /* AppDelegate.swift in Sources */,
@@ -416,8 +434,10 @@
 				ACA934402AD309D000A8FA11 /* CurrencyFormatter.swift in Sources */,
 				ACC0E2982ACBEED200C40D8C /* SceneDelegate.swift in Sources */,
 				ACC786E72AD00D940044B030 /* Extension + UIViewController.swift in Sources */,
+				ACA934902ADACF1C00A8FA11 /* SkeletonLoadable.swift in Sources */,
 				ACA9345B2AD7FFBD00A8FA11 /* ShakeyBellView.swift in Sources */,
 				ACC786DB2ACE91A10044B030 /* PageControllerFactory.swift in Sources */,
+				ACA934922ADAD01100A8FA11 /* Extension + UIColor.swift in Sources */,
 				ACC786E02ACFE1F70044B030 /* DummyViewController.swift in Sources */,
 				ACC786E52AD007A20044B030 /* MainViewController.swift in Sources */,
 				ACC786EA2AD0115A0044B030 /* AccountSummaryViewController.swift in Sources */,

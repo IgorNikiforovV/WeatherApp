@@ -53,6 +53,10 @@ struct Account: Codable {
 	let name: String
 	let amount: Decimal
 	let createdDateTime: Date
+	
+	static func makeSkeleton() -> Account {
+		Account(id: "1", type: .banking, name: "Account name", amount: 0.0, createdDateTime: Date())
+	}
 }
 
 extension AccountSummaryViewController {
