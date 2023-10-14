@@ -23,8 +23,10 @@ final class AccountSummaryViewController: UIViewController {
 		return barButtonItem
 	}()
 	
+	// Components
 	let tableView = UITableView()
 	let headerView = AccountSummaryHeaderView(frame: .zero)
+	let refreshControl = UIRefreshControl()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -39,6 +41,7 @@ private extension AccountSummaryViewController {
 		setupNavigationBar()
 		setupTableView()
 		setupTableHeaderView()
+		setupRefreshControl()
 		fetchData()
 	}
 	
@@ -73,6 +76,12 @@ private extension AccountSummaryViewController {
 		headerView.frame.size = size
 		
 		tableView.tableHeaderView = headerView
+	}
+	
+	func setupRefreshControl() {
+		tableView.refreshControl?.tintColor = appColor
+		tableView.refreshControl = refreshControl
+		refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
 	}
 	
 //	func fetchAccounts() {
@@ -113,7 +122,7 @@ extension AccountSummaryViewController {
 //		reset()
 //		setupSkeletons()
 //		tableView.reloadData()
-//		fetchData()
+		fetchData()
 	}
 }
 
@@ -121,9 +130,12 @@ extension AccountSummaryViewController {
 private extension AccountSummaryViewController {
 	func fetchData() {
 		let group = DispatchGroup()
+		
+		// Testing - random number selection
+		let userId = String(Int.random(in: 1..<4))
 
 		group.enter()
-		fetchProfile(forUserId: "1") { [weak self] result in
+		fetchProfile(forUserId: userId) { [weak self] result in
 			guard let self else { return }
 			switch result {
 			case .success(let profile):
@@ -136,7 +148,7 @@ private extension AccountSummaryViewController {
 		}
 		
 		group.enter()
-		fetchAccounts(forUserId: "1") { [weak self] result in
+		fetchAccounts(forUserId: userId) { [weak self] result in
 			guard let self else { return }
 			switch result {
 			case .success(let accounts):
@@ -150,6 +162,7 @@ private extension AccountSummaryViewController {
 		
 		group.notify(queue: .main) {
 			self.tableView.reloadData()
+			self.refreshControl.endRefreshing()
 		}
 	}
 	
