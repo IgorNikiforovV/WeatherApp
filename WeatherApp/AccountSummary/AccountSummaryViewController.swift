@@ -8,7 +8,7 @@
 import UIKit
 
 final class AccountSummaryViewController: UIViewController {
-	
+
 	// Request Models
 	private(set) var profile: Profile?
 	private(set) var accounts = [Account]()
@@ -22,21 +22,21 @@ final class AccountSummaryViewController: UIViewController {
 		barButtonItem.tintColor = .label
 		return barButtonItem
 	}()
-	
+
 	lazy var errorAlert: UIAlertController = {
 		let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "OK", style: .default))
 		return alert
 	}()
-	
+
 	// Components
 	let tableView = UITableView()
 	let headerView = AccountSummaryHeaderView(frame: .zero)
 	let refreshControl = UIRefreshControl()
-	
+
 	// Networking
 	var profielManager: ProfileManageable = ProfileManmager()
-	
+
 	private var isLoaded = false
 
 	override func viewDidLoad() {
@@ -56,23 +56,23 @@ private extension AccountSummaryViewController {
 		setupSkeletons()
 		fetchData()
 	}
-	
+
 	func setupNavigationBar() {
 		navigationItem.rightBarButtonItem = logoutBarButtonItem
 	}
 	
 	func setupTableView() {
 		tableView.backgroundColor = appColor
-		
+
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(tableView)
-		
+
 		tableView.delegate = self
 		tableView.dataSource = self
-		
+
 		tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseIdentifier)
 		tableView.register(SkeletonCell.self, forCellReuseIdentifier: SkeletonCell.reuseIdentifier)
-		
+
 		tableView.rowHeight = AccountSummaryCell.rowHeight
 		tableView.tableFooterView = UIView()
 		
@@ -83,7 +83,7 @@ private extension AccountSummaryViewController {
 			tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
 		])
 	}
-	
+
 	func setupTableHeaderView() {
 		var size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
 		size.width = UIScreen.main.bounds.width
@@ -91,25 +91,25 @@ private extension AccountSummaryViewController {
 		
 		tableView.tableHeaderView = headerView
 	}
-	
+
 	func setupRefreshControl() {
 		tableView.refreshControl?.tintColor = appColor
 		tableView.refreshControl = refreshControl
 		refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
 	}
-	
+
 	func setupSkeletons() {
 		let row = Account.makeSkeleton()
 		accounts = Array(repeating: row, count: 10)
 		configureTableCells(with: accounts)
 	}
-	
+
 	func reset() {
 		profile = nil
 		accounts = []
 		isLoaded = false
 	}
-	
+
 	func showErrorAlert(title: String, message: String) {
 		errorAlert.title = title
 		errorAlert.message = message
@@ -238,7 +238,7 @@ private extension AccountSummaryViewController {
 	
 	func reloadView() {
 		self.refreshControl.endRefreshing()
-		
+
 		guard let profile else { return }
 		isLoaded = true
 		configureTableHeaderView(with: profile)
