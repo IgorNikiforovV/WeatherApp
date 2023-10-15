@@ -101,6 +101,21 @@ private extension AccountSummaryViewController {
 		isLoaded = false
 	}
 	
+	func showErrorAlert(title: String, message: String) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default))
+		present(alert, animated: true)
+	}
+	
+	func displayError(_ error: NetworkError) {
+		switch error {
+		case .serverError:
+			self.showErrorAlert(title: "Server Error", message: "Ensure you are connected to the internet. Please try again.")
+		case .decodingError:
+			self.showErrorAlert(title: "Decoding Error", message: "We could not precess your request. Please try again.")
+		}
+	}
+	
 //	func fetchAccounts() {
 //		accountCellViewModels = AccountsRepository().fetchAccounts()
 //	}
@@ -163,7 +178,7 @@ private extension AccountSummaryViewController {
 			case .success(let profile):
 				self.profile = profile
 			case .failure(let error):
-				print(error.localizedDescription)
+				displayError(error)
 			}
 			group.leave()
 		}
@@ -175,7 +190,7 @@ private extension AccountSummaryViewController {
 			case .success(let accounts):
 				self.accounts = accounts
 			case .failure(let error):
-				print(error.localizedDescription)
+				displayError(error)
 			}
 			group.leave()
 		}

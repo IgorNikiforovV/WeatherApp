@@ -27,13 +27,13 @@ struct Profile: Codable {
 internal extension AccountSummaryViewController {
 	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile, NetworkError>) -> Void) {
 		let url = URL(string: "https://fierce-retreat-36855.herokuapp.com/bankey/profile/\(userId)")!
-		
+
 		URLSession.shared.dataTask(with: url) { data, response, error in
 			DispatchQueue.main.async {
 				guard let data, error == nil else {
-					return completion(.failure(.serverError))
+ 					return completion(.failure(.serverError))
 				}
-				
+
 				do {
 					let profile = try JSONDecoder().decode(Profile.self, from: data)
 					print(profile)
