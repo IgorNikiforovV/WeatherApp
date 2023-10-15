@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC64AAF12ADBD5B4006BD01F /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64AAF02ADBD5B4006BD01F /* AccountSummaryViewControllerTests.swift */; };
 		ACA934372AD19ED400A8FA11 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA934362AD19ED400A8FA11 /* ProfileManager.swift */; };
 		ACA9343B2AD1A59800A8FA11 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */; };
 		ACA9343E2AD3011300A8FA11 /* AccountsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9343D2AD3011300A8FA11 /* AccountsRepository.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC64AAF02ADBD5B4006BD01F /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		ACA934362AD19ED400A8FA11 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		ACA9343A2AD1A59800A8FA11 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		ACA9343D2AD3011300A8FA11 /* AccountsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsRepository.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				ACA9348A2AD9654F00A8FA11 /* ProfileTest.swift */,
 				ACA9348C2AD9673600A8FA11 /* AccountTests.swift */,
+				AC64AAF02ADBD5B4006BD01F /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				ACA934512AD59CEA00A8FA11 /* CurrencyFormatterTests.swift in Sources */,
 				ACA9348D2AD9673600A8FA11 /* AccountTests.swift in Sources */,
 				ACA9348B2AD9654F00A8FA11 /* ProfileTest.swift in Sources */,
+				AC64AAF12ADBD5B4006BD01F /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

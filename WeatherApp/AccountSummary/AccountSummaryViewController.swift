@@ -12,7 +12,7 @@ final class AccountSummaryViewController: UIViewController {
 	// Request Models
 	private(set) var profile: Profile?
 	private(set) var accounts = [Account]()
-	
+
 	// View Models
 	var headerViewModel = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
 	var accountCellViewModels = [AccountSummaryCell.ViewModel]()
@@ -23,10 +23,19 @@ final class AccountSummaryViewController: UIViewController {
 		return barButtonItem
 	}()
 	
+	lazy var errorAlert: UIAlertController = {
+		let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default))
+		return alert
+	}()
+	
 	// Components
 	let tableView = UITableView()
 	let headerView = AccountSummaryHeaderView(frame: .zero)
 	let refreshControl = UIRefreshControl()
+	
+	// Networking
+	var profielManager: ProfileManageable = ProfileManmager()
 	
 	private var isLoaded = false
 
@@ -63,7 +72,7 @@ private extension AccountSummaryViewController {
 		
 		tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseIdentifier)
 		tableView.register(SkeletonCell.self, forCellReuseIdentifier: SkeletonCell.reuseIdentifier)
-
+		
 		tableView.rowHeight = AccountSummaryCell.rowHeight
 		tableView.tableFooterView = UIView()
 		
@@ -102,17 +111,37 @@ private extension AccountSummaryViewController {
 	}
 	
 	func showErrorAlert(title: String, message: String) {
-		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .default))
-		present(alert, animated: true)
+		errorAlert.title = title
+		errorAlert.message = message
+		present(errorAlert, animated: true)
+	}
+	
+	func titleAndMessage(for error: NetworkError) -> (String, String) {
+		switch error {
+		case .serverError:
+			return ("Server Error", "Ensure you are connected to the internet. Please try again.")
+		case .decodingError:
+			return ("Decoding Error", "We could not precess your request. Please try again.")
+		}
 	}
 	
 	func displayError(_ error: NetworkError) {
-		switch error {
-		case .serverError:
-			self.showErrorAlert(title: "Server Error", message: "Ensure you are connected to the internet. Please try again.")
-		case .decodingError:
-			self.showErrorAlert(title: "Decoding Error", message: "We could not precess your request. Please try again.")
+		let titleAndMessage = titleAndMessage(for: error)
+		self.showErrorAlert(title: titleAndMessage.0, message: titleAndMessage.1)
+	}
+	
+	func configureTableHeaderView(with profile: Profile) {
+		let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Good morning,",
+													name: profile.firstName,
+													date: Date())
+		headerView.configure(viewModel: vm)
+	}
+	
+	func configureTableCells(with accounts: [Account]) {
+		accountCellViewModels = accounts.map {
+			AccountSummaryCell.ViewModel(accountType: $0.type,
+										 accountName: $0.name,
+										 balance: $0.amount)
 		}
 	}
 	
@@ -170,9 +199,18 @@ private extension AccountSummaryViewController {
 		
 		// Testing - random number selection
 		let userId = String(Int.random(in: 1..<4))
+		
+		fetchProfile(group: group, userId: userId)
+		fetchAccounts(group: group, userId: userId)
 
+		group.notify(queue: .main) {
+			self.reloadView()
+		}
+	}
+	
+	func fetchProfile(group: DispatchGroup, userId: String) {
 		group.enter()
-		fetchProfile(forUserId: userId) { [weak self] result in
+		profielManager.fetchProfile(forUserId: userId) { [weak self] result in
 			guard let self else { return }
 			switch result {
 			case .success(let profile):
@@ -182,7 +220,9 @@ private extension AccountSummaryViewController {
 			}
 			group.leave()
 		}
-		
+	}
+
+	func fetchAccounts(group: DispatchGroup, userId: String) {
 		group.enter()
 		fetchAccounts(forUserId: userId) { [weak self] result in
 			guard let self else { return }
@@ -194,30 +234,26 @@ private extension AccountSummaryViewController {
 			}
 			group.leave()
 		}
+	}
+	
+	func reloadView() {
+		self.refreshControl.endRefreshing()
 		
-		group.notify(queue: .main) {
-			self.refreshControl.endRefreshing()
-			
-			guard let profile = self.profile else { return }
-			self.isLoaded = true
-			self.configureTableHeaderView(with: profile)
-			self.configureTableCells(with: self.accounts)
-			self.tableView.reloadData()
-		}
+		guard let profile else { return }
+		isLoaded = true
+		configureTableHeaderView(with: profile)
+		configureTableCells(with: self.accounts)
+		tableView.reloadData()
+	}
+}
+
+// MARK: Unit testing
+extension AccountSummaryViewController {
+	func titleAndMessageForTesting(for error: NetworkError) -> (String, String) {
+		return titleAndMessage(for: error)
 	}
 	
-	func configureTableHeaderView(with profile: Profile) {
-		let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Good morning,",
-													name: profile.firstName,
-													date: Date())
-		headerView.configure(viewModel: vm)
-	}
-	
-	func configureTableCells(with accounts: [Account]) {
-		accountCellViewModels = accounts.map {
-			AccountSummaryCell.ViewModel(accountType: $0.type,
-										 accountName: $0.name,
-										 balance: $0.amount)
-		}
+	func forceFetchProfile() {
+		fetchProfile(group: DispatchGroup(), userId: "1")
 	}
 }

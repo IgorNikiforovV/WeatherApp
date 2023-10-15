@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol ProfileManageable1 {
-	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile1, NetworkError1>) -> Void)
+protocol ProfileManageable {
+	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile, NetworkError>) -> Void)
 }
 
-enum NetworkError1: Error {
+enum NetworkError: Error {
 	case serverError
 	case decodingError
 }
 
-struct Profile1: Codable {
+struct Profile: Codable {
 	let id: String
 	let firstName: String
 	let lastName: String
@@ -25,5 +25,28 @@ struct Profile1: Codable {
 		case id
 		case firstName = "first_name"
 		case lastName = "last_name"
+	}
+}
+
+final class ProfileManmager: ProfileManageable {
+	func fetchProfile(forUserId userId: String, completion: @escaping (Result<Profile, NetworkError>) -> Void) {
+		let url = URL(string: "https://fierce-retreat-36855.herokuapp.com/bankey/profile/\(userId)")!
+		
+		URLSession.shared.dataTask(with: url) { data, response, error in
+			DispatchQueue.main.async {
+				guard let data, error == nil else {
+					return completion(.failure(.serverError))
+				}
+
+				do {
+					let profile = try JSONDecoder().decode(Profile.self, from: data)
+					print(profile)
+					completion(.success(profile))
+				} catch {
+					print("\(error.localizedDescription)")
+					completion(.failure(.decodingError))
+				}
+			}
+		}.resume()
 	}
 }
