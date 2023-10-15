@@ -42,7 +42,7 @@ class AccountSummaryViewControllerTests: XCTestCase {
 		XCTAssertEqual("Server Error", vc.errorAlert.title)
 		XCTAssertEqual("Ensure you are connected to the internet. Please try again.", vc.errorAlert.message)
 	}
-	
+		
 	func testAlertForDecodingError() {
 		mockManager.error = .decodingError
 		vc.forceFetchProfile()
