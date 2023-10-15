@@ -58,7 +58,7 @@ class AccountSummaryViewControllerTests: XCTestCase {
 	}
 }
 
-// Mock
+// MARK: Mocks
 
 extension AccountSummaryViewControllerTests {
 	class MockProfileManager: ProfileManageable {
